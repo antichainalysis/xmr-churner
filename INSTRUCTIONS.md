@@ -4,4 +4,4 @@ The only way `moneroc` will work is if you have your funds to distribute and chu
 
 - Make a new wallet
 - Transfer the amount of funds you want to distribute and churn into Account 0 (primary/first index)
-- 
+- Install [`moneroc`](https://github.com/antichainalysis/xmr-churner/blob/main/README.md#usage)
