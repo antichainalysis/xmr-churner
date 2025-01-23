@@ -8,13 +8,17 @@
 </div>
 
 # Description
-`moneroc` is a tool designed for automating the process of churning Monero (XMR) funds across multiple accounts in the same wallet using the monero-wallet-rpc. It allows you to create new accounts, transfer XMR between them, and perform churn operations repeatedly, with configurable parameters for the amount of times you want to perform a churn.
+`moneroc` is a tool designed for automating the process of distributing funds between multiple Monero accounts and **churning** them (i.e., transferring funds between accounts multiple times) in the same wallet using monero-wallet-rpc. It interacts with the Monero RPC server to create new accounts, distribute funds, churn, and shuffle balances. The goal is to enhance the **privacy and transaction obfuscation**, making it mroe difficult to trace the origin and flow of funds. `moneroc` accomplishes this by leveraging **Monero's ring signature privacy** and simulating the **natural fund movements** with randomized delays between transactions.
+
+`moneroc` is designed for:
+* **Obfuscating the source of funds** by introducing multiple decoy addresses that get mixed into future transactions, utilizing **ring signatures** to obscure transaction origins.
+* **Simulating real-world transaction patterns** by adding unpredictable delays and repeating churn operations over several hours, preventing any identified patterns in fund transfers.
 
 # Features
-* **Dynamic Range Calculation**: `moneroc` automatically calculates the range of atomic units (AMU) to send based on the total balance of the account (main account 0).
-* **Account Creation & Transfer**: `moneroc` automatically creates new monero accounts and transfers a random amount of XMR within a specific range between them.
-* **Churn Automation**: Configurable churn range to randomly perform transfers between accounts for a set number of times.
-* **RPC Interface**: `moneroc` interacts with your (local) Monero node(s) through the RPC interface, allowing local/remote communication with Monero wallets.
+* **Dynamic Range Calculation**: `moneroc` automatically calculates the range of atomic units (AMU) to distribute based on the total balance of the account (main account 0).
+* **Account Creation & Transfer**: `moneroc` automatically creates new monero accounts and distributes a random amount of XMR within a specific range between them.
+* **Churn Automation**: Configurable churn range to randomly perform churns between accounts for a set number of times to enhance privacy.
+* **Monitors Account Balance**: `moneroc` ensures that sufficient unlocked funds are available before proceeding with any transactions.
 * **Delays**: Random (30-60 minutes delay range) delays between each operation because after each churn, 8-10+ hours pass, and decoy addresses start to appear, making it difficult for anyone monitoring the process to detect patterns, trace, or link activities.
 
 # Requirements
@@ -44,8 +48,28 @@ bun run main.ts --rpc-url http://127.0.0.1:18082/json_rpc --churnRange 3,7
 ```
 
 # How It Works
-1. **Initial Balance Check**: The tool checks the balance of the main Monero account (0) you need to make sure all your funds you want to churn are sitting in account 0.
-2. **Range Calculation**: Based on the total balance, the tool will calculate the range of atomic units (AMU) to be distributed.
-3. **Account Creation**: It creates a new Monero account and sends a random amount of XMR to that account.
-4. **Churn Loop**: The tool loops over existing accounts, performing the churn operation for a random number of iterations within the defined `churnRange`.
-5. **Delays**: Random (30-60 minutes delay range) delays between each operation because after each churn, 8-10+ hours pass, and decoy addresses start to appear, making it difficult for anyone monitoring the process to detect patterns, trace, or link activities.
+**1. Check Account Balance**
+  * `moneroc` first checks the balance and unlocked balance of the wallet.
+  * If the balance is below the upper limit of `maxRange`, `moneroc` breaks the loop and stops distributing funds.
+  * If the unlocked balance is insufficient, it waits for the funds to become available by polling the balance every 5 seconds
+    
+**2. Create new Account**
+  * Once sufficient funds are avaiable, `moneroc` creates a new Monero account and retrieves the account's address and index
+
+**3. Fund Distribution**
+  * A random amount of XMR (within the `amuRange` range) is selected and transferred to the newly created account using the Monero `transfer` method via a RPC call.
+
+**4. Wait for Unlocked Funds**
+  * If the unlocked balance is not enough, `moneroc` waits until the funds are unlocked.
+
+**5. Random Delays Between Operations**
+  * After each transfer, `moneroc` introduces a random delay between 30 and 60 minutes to mimic more natual, human-like behaviour. This prevents `moneroc` from acting in a predictable manner and makes it harder for any observer to track/trace the flow of funds.
+
+**6. Churning Process**
+  * After all funds have been distributed across the accounts created in the same wallet, `moneroc` starts the churning process:
+      * It retrieves a list of all accounts and their balances.
+      * Accounts with non-zero balances are selected for churning.
+      * `moneroc` transfers funds from each account to a newly created account, iterating over each account as specific by the `churnRange`
+
+**7. Churning Iterations**
+  * `moneroc` performs the churn operation for each selected account a random number of times (`iters`), defined within the `churnRange`. Each churn operation involves transferring all available funds from an account to a new one.
