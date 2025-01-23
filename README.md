@@ -35,6 +35,8 @@ All `moneroc` requires to install is bun.sh, execute the following:
    ```
 
 # Usage
+PLEASE READ [THIS](https://github.com/antichainalysis/xmr-churner/blob/main/INSTRUCTIONS.md) BEFORE YOU INSTALL AND RUN `moneroc`.
+
 To run `moneroc`, execute the following command:
 ```
 bun run main.ts --rpc-url <RPC_URL> --churnRange <min,max>
