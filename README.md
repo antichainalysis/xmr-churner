@@ -48,6 +48,9 @@ bun run main.ts --rpc-url http://127.0.0.1:18082/json_rpc --churnRange 3,7
 ```
 
 # How It Works
+
+Read [this](https://github.com/antichainalysis/xmr-churner/blob/main/example_flow_of_funds_process.md) for a better, simpler, clearer understanding of `moneroc`.
+
 **1. Check Account Balance**
   * `moneroc` first checks the balance and unlocked balance of the wallet.
   * If the balance is below the upper limit of `maxRange`, `moneroc` breaks the loop and stops distributing funds.
