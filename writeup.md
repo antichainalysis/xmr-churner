@@ -35,9 +35,18 @@ There are still a few key things I'd like to mention/explain:
     * **Avoiding Predictability:** Rapid, automated transactions can easily be identified by observers/adversaries/3rd parties, leading to patterns that could compromise/undermine your privacy.
     * It enhances **Monero's Ring Signature Privacy**, once 1 FULL whole churn loop is done, 8 to 10+ hours have passed, the **ring signature** mechanism in Monero becomes much more effective. Monero uses **ring signatures** to mix your transaction with others, making it difficult to trace the source or destination of funds. When funds are moved across multiple acounts over time, the **number of decoy addresses** in the ring increases, which strethens the privacy of the transaction.
     * The **ring size**—such as **Ring 16**—means that there are 16 possibile sources for a transaction, including your own address and 15 decoy addresses. As more time passes and more churn occurs, the total number of decoy addresses involved in each transaction increases, making it significantly harder to identify the real sender or receiver.
-- It is HIGHLY recommended that you run your OWN monero node and on TOR (I will explain later on why this is needed)
+- It is HIGHLY recommended that you run your OWN monero node and on TOR (read below on why this is needed)
     * running monerod with tor:
         ```
         monerod --proxy tor,127.0.0.1:9050 --anonymous-inbound tor,127.0.0.1:9050
         ```
-- `moneroc` deletes your `p2pstate.bin` file because each Monero daemon has a node ID stored that is stored in the p2pstate.bin file. If and when you switch between Tor and the clearnet, this node ID (`p2pstate.bin`) file can be used to link the two, associating an IP address with your Tor sesion as mentioned in [this](https://www.reddit.com/r/Monero/s/SgUICWOcuB) reddit.
+- `moneroc` deletes your `p2pstate.bin` file because each Monero daemon has a node ID stored that is stored in the p2pstate.bin file. If and when you switch between Tor and the clearnet, this node ID (`p2pstate.bin`) file can be used to link the two, associating an IP address with your Tor session as mentioned in [this](https://www.reddit.com/r/Monero/s/SgUICWOcuB) reddit thread.
+
+## Why run Monero daemon on Tor?
+Everytime `moneroc` broadcasts a transaction (churns), it connects to a Monero **peer-to-peer** network node. If you run `moneroc` without using Tor, all of your transactions will be associated with the same public IP address, which could potentially link them together and undermine your privacy. 
+
+Chainalysis, in a presentation to the IRS a few months ago (August-September 2024), explained how they run a lot of their **OWN poisoned (honeypot) nodes** in attempt to trace Monero transactions (lol). Their nodes are set up in a way to trace and link Monero transactions in an effort to de-anonymize us users... so later on in this writing I will refer to them as __CA nodes__.
+
+The concern is that if all of your churn transactions come from a single IP address, it could look like they are coming from an exchange or centralized platform. This could be an indicator that you're churning XMR with non-private intentions.
+
+However, not all nodes are CA so it wouldn't be every single TX (churn). Each chunk gets churned a random number of times and then each output split in size so there's a lot of oppurtunities for `moneroc` to have connected to CA node(s) and non CA node(s).
