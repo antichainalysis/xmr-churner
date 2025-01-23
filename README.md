@@ -8,7 +8,7 @@
 </div>
 
 # Description
-`moneroc` is a tool designed for automating the process of distributing funds between multiple Monero accounts and **churning** them (i.e., transferring funds between accounts multiple times) in the same wallet using monero-wallet-rpc. It interacts with the Monero RPC server to create new accounts, distribute funds, churn, and shuffle balances. The goal is to enhance the **privacy and transaction obfuscation**, making it mroe difficult to trace the origin and flow of funds. `moneroc` accomplishes this by leveraging **Monero's ring signature privacy** and simulating the **natural fund movements** with randomized delays between transactions.
+`moneroc` is a tool designed for automating the process of distributing funds between multiple Monero accounts and **churning** them (i.e., transferring funds between accounts multiple times) in the same wallet using monero-wallet-rpc. It interacts with the Monero RPC server to create new accounts, distribute funds, churn, and shuffle balances. The goal is to enhance the **privacy and transaction obfuscation**, making it more difficult to trace the origin and flow of funds. `moneroc` accomplishes this by leveraging **Monero's ring signature privacy** and simulating the **natural fund movements** with randomized delays between transactions.
 
 `moneroc` is designed for:
 * **Obfuscating the source of funds** by introducing multiple decoy addresses that get mixed into future transactions, utilizing **ring signatures** to obscure transaction origins.
