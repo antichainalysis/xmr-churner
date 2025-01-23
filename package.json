@@ -1,0 +1,32 @@
+{
+  "name": "xmr-churner",
+  "version": "1.0.0",
+  "description": "moneroc - The proper way to churn Monero",
+  "module": "index.ts",
+  "type": "module",
+  "keywords": [
+    "xmr-churner",
+    "xmrchurner",
+    "churnxmr",
+    "xmrmixer",
+    "churn",
+    "monero",
+    "xmr",
+    "mixer",
+    "xmr mixer",
+    "mix xmr",
+    "churn xmr"
+  ],
+  "author": "antichainalysis",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/yargs": "^17.0.33"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2",
+    "yargs-parser": "^21.1.1"
+  }
+}
