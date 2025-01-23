@@ -12,7 +12,7 @@
 
 `moneroc` is designed for:
 * **Obfuscating the source of funds** by introducing multiple decoy addresses that get mixed into future transactions, utilizing **ring signatures** to obscure transaction origins.
-* **Simulating real-world transaction patterns** by adding unpredictable delays and repeating churn operations over several hours, preventing any identified patterns in fund transfers.
+* **Simulating real-world transaction patterns** by adding unpredictable delays and repeating churn operations over several hours, preventing any identifying patterns in fund transfers.
 
 # Features
 * **Dynamic Range Calculation**: `moneroc` automatically calculates the range of atomic units (AMU) to distribute based on the total balance of the account (main account 0).
