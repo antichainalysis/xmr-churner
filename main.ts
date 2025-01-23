@@ -47,8 +47,8 @@ async function main() {
     while (true) {
         const { balance, unlockedBalance } = await getBalance(rpcUrl);
 
-        console.log("Balance:", balance);
-        console.log("Unlocked:", unlockedBalance);
+        console.log("Balance:", balance / 1e12);
+        console.log("Unlocked:", unlockedBalance / 1e12);
 
         if (balance < maxRange) break;
         if (unlockedBalance < maxRange) {
@@ -99,6 +99,8 @@ async function main() {
             await randomDelay(delayRange);
         }
     }
+
+    console.log("Finished all churns");
 };
 
 main()
