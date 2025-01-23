@@ -4,7 +4,7 @@
 </h1>
 
 <div align="center">
-  <h3>The proper way to churn Monero</h3>
+  <h3><a href="https://github.com/antichainalysis/xmr-churner/blob/main/writeup.md">The proper way to churn Monero</a></h3>
 </div>
 
 # Description
