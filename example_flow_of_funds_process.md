@@ -57,3 +57,136 @@ Account 9 -> Account 19
 wait 30-60 minutes
 Account 10 -> Account 20
 ```
+
+# Conceptual Visual Representation
+
+```mermaid
+classDiagram
+    class Churning {
+        The main churning process.
+        +getAccounts()
+        +churn()
+        +randomDelay()
+    }
+
+    class Account0 {
+        XMR = 100
+        +getBalance()
+        +waitForBalance()
+        +createAccount()
+        +transfer()
+    }
+
+    class Account1 {
+        XMR = 10
+    }
+
+    class Account2 {
+        XMR = 10
+    }
+
+    class Account3 {
+        XMR = 10
+    }
+
+    class Account4 {
+        XMR = 10
+    }
+
+    class Account5 {
+        XMR = 10
+    }
+
+    class Account6 {
+        XMR = 10
+    }
+
+    class Account7 {
+        XMR = 10
+    }
+
+    class Account8 {
+        XMR = 10
+    }
+
+    class Account9 {
+        XMR = 10
+    }
+
+    class Account10 {
+        XMR = 10
+    }
+
+    class Account11 {
+        XMR = 10
+    }
+
+    class Account12 {
+        XMR = 10
+    }
+
+    class Account13 {
+        XMR = 10
+    }
+
+    class Account14 {
+        XMR = 10
+    }
+
+    class Account15 {
+        XMR = 10
+    }
+
+    class Account16 {
+        XMR = 10
+    }
+
+    class Account17 {
+        XMR = 10
+    }
+
+    class Account18 {
+        XMR = 10
+    }
+
+    class Account19 {
+        XMR = 10
+    }
+
+    class Account20 {
+        XMR = 10
+    }
+
+    Account0 --> Account1 : distributes XMR
+    Account0 --> Account2 : distributes XMR
+    Account0 --> Account3 : distributes XMR
+    Account0 --> Account4 : distributes XMR
+    Account0 --> Account5 : distributes XMR
+    Account0 --> Account6 : distributes XMR
+    Account0 --> Account7 : distributes XMR
+    Account0 --> Account8 : distributes XMR
+    Account0 --> Account9 : distributes XMR
+    Account0 --> Account10 : distributes XMR
+
+    Account1 --> Churning : undergoes
+    Account2 --> Churning : undergoes
+    Account3 --> Churning : undergoes
+    Account4 --> Churning : undergoes
+    Account5 --> Churning : undergoes
+    Account6 --> Churning : undergoes
+    Account7 --> Churning : undergoes
+    Account8 --> Churning : undergoes
+    Account9 --> Churning : undergoes
+    Account10 --> Churning : undergoes
+
+    Churning --> Account11 : transfers to
+    Churning --> Account12 : transfers to
+    Churning --> Account13 : transfers to
+    Churning --> Account14 : transfers to
+    Churning --> Account15 : transfers to
+    Churning --> Account16 : transfers to
+    Churning --> Account17 : transfers to
+    Churning --> Account18 : transfers to
+    Churning --> Account19 : transfers to
+    Churning --> Account20 : transfers to
+``` 
