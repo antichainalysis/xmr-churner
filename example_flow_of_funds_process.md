@@ -34,7 +34,9 @@ Account 0 -> Account 10: 10 XMR
 2. **Churning Process**:
    * After distribution, accounts with non-zero balances (Account 1 to Account 10 in this context/example) are selected for churning.
    * Each account moves its funds to a newly created account (Account 11 to Account 20 in this context/example), with random delays between each transaction.
-  
+
+**NOTE: This is just 1 churn, there are more churns**
+
 Churning Process:
 ```
 Account 1 -> Account 11
