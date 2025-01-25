@@ -15,6 +15,26 @@ The main issue with `sweep_all` is more about **consolidation**. For example, by
 
 While it does consolidate the funds, it creates a direct link between multiple addresses, which could make the transaction history easier to trace if someone is able to track the previous addresses. This linking of outputs could potentially reduce privacy, especially if you use the same `sweep_all` methods repeatedly.
 
+# Why is Churning needed?
+
+Monero churning is really only needed especially when your funds originate from an exchange/identifiable source/traceable source that WILL report to **Chainalysis** and/or the **IRS**. So, I agree with people who say normal Monero users should not participate in Monero churning.
+
+When you receive Monero from an exchange or other identifiable sources, **the origin of funds can often be traced back** to the exchange. One of the very common methods used to trace back Monero funds is the **EAE (Eve-Alice-Eve) attack**. 
+
+In the **EAE attack**, the first "Eve" is (Chainalysis/IRS) getting the outgoing TXID(s) from whatever exchange. Then, identify "Alice's" consolidation transactions. The second "Eve" trick is when you bring that Monero from the exchange (the first "Eve") to the same or **ANOTHER exchange**. That's when an external observer (Chainalysis/IRS) gets to see the Monero deposit addresses (yes it's still impossible to identify Monero's stealth deposit addresses using blockchain data but if you are sending Monero that comes directly from an exchange prior, external observers are able to see this still because of their authority...). 
+
+The core issue arises from the fact that **exchanges are a weak point** in Monero's privacy. It's easier for external observers to link transactions originating from exchanges. For a deeper dive into the very technical details of this, see this [article on tracing Monero transactions](https://medium.com/@nbax/tracing-the-wannacry-2-0-monero-transactions-d8c1e5129dc1).
+
+Even Monero developers acknowledge this in their article on **FCMP++** ([Monero's Official Article](https://www.getmonero.org/2024/04/27/fcmps.html)):
+
+```
+Full-Chain Membership Proofs, as a concept, is a replacement for rings within the Monero protocol. While rings have offered sender privacy to Monero since it launched, they're vulnerable to attacks such as the EAE attack, have difficulties upon chain reorganizations, and in general enable statistical analysis (mitigated by distribution of the decoy selection algorithm).
+```
+
+One highly notable example is when **Julius "zeekill" Kivimäki**, who was identified because he [inadvertently fell victim to the EAE attack](https://cointelegraph.com/news/finnish-authorities-traced-monero-vastaamo-hack). You'd be surprised by how many people inadvertently fall victim to this attack, even if they churn their Monero after receiving it from an exchange and that is because they INCORRECTLY churn it.
+
+However, after "Alice" if the person was to churn their Monero after receiving it from the exchange (CORRECTLY) then there would be no chance in being identified. Additionally, waiting a minimum of **12 hours**, and ideally **one to two days,** before exchanging your Monero adds signfnicant privacy benefits (because of **Monero's Ring Signature technology**). 
+
 ### self-sending:
 
 Self-sending is when you send coins back to yourself within the same wallet **account** (e.g., using the same receiving address or generating a new address under the same account).
