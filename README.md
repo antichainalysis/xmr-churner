@@ -22,7 +22,7 @@
 * **Delays**: Random (30-60 minutes delay range) delays between each operation because after each churn, 8-10+ hours pass, and decoy addresses start to appear, making it difficult for anyone monitoring the process to detect patterns, trace, or link activities.
 
 # Requirements
-* Your OWN (local - will explain why later on why local node is needed) Monero node.
+* Your OWN ([local - will explain why later on why local node is needed](https://github.com/antichainalysis/xmr-churner/blob/main/writeup.md#introduction-to-moneroc)) Monero node.
 * monero-wallet-rpc completely setup with the JSON-RPC interface enabled (default is `http://127.0.0.1:18082/json_rpc`)
 * bun - https://bun.sh/ for running the tool.
 
