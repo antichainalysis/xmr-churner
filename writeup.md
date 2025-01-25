@@ -60,7 +60,7 @@ There are still a few key things I'd like to mention/explain:
         ```
         monerod --proxy tor,127.0.0.1:9050 --anonymous-inbound tor,127.0.0.1:9050
         ```
-- `moneroc` deletes your `p2pstate.bin` file because each Monero daemon has a node ID stored that is stored in the p2pstate.bin file. If and when you switch between Tor and the clearnet, this node ID (`p2pstate.bin`) file can be used to link the two, associating an IP address with your Tor session as mentioned in [this](https://www.reddit.com/r/Monero/s/SgUICWOcuB) reddit thread.
+- [[NOT IMPLEMENTED INTO THE CODE YET](https://github.com/antichainalysis/xmr-churner/issues/1)] - `moneroc` deletes your `p2pstate.bin` file because each Monero daemon has a node ID stored that is stored in the p2pstate.bin file. If and when you switch between Tor and the clearnet, this node ID (`p2pstate.bin`) file can be used to link the two, associating an IP address with your Tor session as mentioned in [this](https://www.reddit.com/r/Monero/s/SgUICWOcuB) reddit thread.
 
 ## Why run Monero daemon on Tor?
 Every time `moneroc` broadcasts a transaction (churns), it connects to a Monero **peer-to-peer** network node. If you run `moneroc` without using Tor, all of your transactions will be associated with the same public IP address, which could potentially link them together and undermine your privacy. 
