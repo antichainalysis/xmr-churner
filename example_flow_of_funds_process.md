@@ -64,7 +64,61 @@ Account 10 -> Account 20
 
 ```mermaid
 classDiagram
-    class Churning {
+    class Churning1 {
+        The main churning process.
+        +getAccounts()
+        +churn()
+        +randomDelay()
+    }
+    class Churning2 {
+        The main churning process.
+        +getAccounts()
+        +churn()
+        +randomDelay()
+    }
+    class Churning3 {
+        The main churning process.
+        +getAccounts()
+        +churn()
+        +randomDelay()
+    }
+    class Churning4 {
+        The main churning process.
+        +getAccounts()
+        +churn()
+        +randomDelay()
+    }
+    class Churning5 {
+        The main churning process.
+        +getAccounts()
+        +churn()
+        +randomDelay()
+    }
+    class Churning6 {
+        The main churning process.
+        +getAccounts()
+        +churn()
+        +randomDelay()
+    }
+    class Churning7 {
+        The main churning process.
+        +getAccounts()
+        +churn()
+        +randomDelay()
+    }
+    class Churning8 {
+        The main churning process.
+        +getAccounts()
+        +churn()
+        +randomDelay()
+    }
+    class Churning9 {
+        The main churning process.
+        +getAccounts()
+        +churn()
+        +randomDelay()
+    }
+    class Churning10 {
         The main churning process.
         +getAccounts()
         +churn()
@@ -170,25 +224,25 @@ classDiagram
     Account0 --> Account9 : distributes XMR
     Account0 --> Account10 : distributes XMR
 
-    Account1 --> Churning : undergoes
-    Account2 --> Churning : undergoes
-    Account3 --> Churning : undergoes
-    Account4 --> Churning : undergoes
-    Account5 --> Churning : undergoes
-    Account6 --> Churning : undergoes
-    Account7 --> Churning : undergoes
-    Account8 --> Churning : undergoes
-    Account9 --> Churning : undergoes
-    Account10 --> Churning : undergoes
+    Account1 --> Churning1 : undergoes
+    Account2 --> Churning2 : undergoes
+    Account3 --> Churning3 : undergoes
+    Account4 --> Churning4 : undergoes
+    Account5 --> Churning5 : undergoes
+    Account6 --> Churning6 : undergoes
+    Account7 --> Churning7 : undergoes
+    Account8 --> Churning8 : undergoes
+    Account9 --> Churning9 : undergoes
+    Account10 --> Churning10 : undergoes
 
-    Churning --> Account11 : transfers to
-    Churning --> Account12 : transfers to
-    Churning --> Account13 : transfers to
-    Churning --> Account14 : transfers to
-    Churning --> Account15 : transfers to
-    Churning --> Account16 : transfers to
-    Churning --> Account17 : transfers to
-    Churning --> Account18 : transfers to
-    Churning --> Account19 : transfers to
-    Churning --> Account20 : transfers to
+    Churning1 --> Account11 : transfers to
+    Churning2 --> Account12 : transfers to
+    Churning3 --> Account13 : transfers to
+    Churning4 --> Account14 : transfers to
+    Churning5 --> Account15 : transfers to
+    Churning6 --> Account16 : transfers to
+    Churning7 --> Account17 : transfers to
+    Churning8 --> Account18 : transfers to
+    Churning9 --> Account19 : transfers to
+    Churning 10 --> Account20 : transfers to
 ``` 
