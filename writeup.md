@@ -35,7 +35,7 @@ There are still a few key things I'd like to mention/explain:
     * **Avoiding Predictability:** Rapid, automated transactions can easily be identified by observers/adversaries/3rd parties, leading to patterns that could compromise/undermine your privacy.
     * It enhances **Monero's Ring Signature Privacy**, once 1 FULL whole churn loop is done, 8 to 10+ hours have passed, the **ring signature** mechanism in Monero becomes much more effective. Monero uses **ring signatures** to mix your transaction with others, making it difficult to trace the source or destination of funds. When funds are moved across multiple acounts over time, the **number of decoy addresses** in the ring increases, which strengthens the privacy of the transaction.
     * The **ring size**—such as **Ring 16**—means that there are 16 possible sources for a transaction, including your own address and 15 decoy addresses. As more time passes and more churn occurs, the total number of decoy addresses involved in each transaction increases, making it significantly harder to identify the real sender or receiver.
-- It is HIGHLY recommended that you run your OWN monero node and on TOR (read below on why this is needed)
+- It is HIGHLY recommended that you run your OWN monero node and on Tor (read below on why this is needed)
     * running monerod with tor:
         ```
         monerod --proxy tor,127.0.0.1:9050 --anonymous-inbound tor,127.0.0.1:9050
