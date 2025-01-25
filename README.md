@@ -16,6 +16,8 @@
 
 **NOTE: `moneroc` is not offering or guaranting full complete untraceability of your Monero, simply put it is just a tool designed to help Monero users who participate in churning [to do it properly](https://github.com/antichainalysis/xmr-churner/blob/main/writeup.md) (read up carefully before you use). Monero is a tool just like `moneroc` and tools are meant to be used correctly. There is no silver bullet for privacy, people can slip up and make mistakes—just be smart, cautious, and aware/vigilant.**
 
+I have tried and will continue to try to make this tool as user-friendly as possible so even the most non-technical/average person is able to use it easily and successfully.
+
 # Features
 * **Dynamic Range Calculation**: `moneroc` automatically calculates the range of atomic units (AMU) to distribute based on the total balance of the account (main account 0).
 * **Account Creation & Transfer**: `moneroc` automatically creates new monero accounts and distributes a random amount of XMR within a specific range between them.
