@@ -33,7 +33,7 @@ Full-Chain Membership Proofs, as a concept, is a replacement for rings within th
 
 One highly notable example is when **Julius "zeekill" Kivimäki**, who was identified because he [inadvertently fell victim to the EAE attack](https://cointelegraph.com/news/finnish-authorities-traced-monero-vastaamo-hack). You'd be surprised by how many people inadvertently fall victim to this attack, even if they churn their Monero after receiving it from an exchange and that is because they INCORRECTLY churn it.
 
-However, after "Alice" if the person was to churn their Monero after receiving it from the exchange (CORRECTLY) then there would be no chance in being identified. Additionally, waiting a minimum of **12 hours**, and ideally **one to two days,** before exchanging your Monero adds signfnicant privacy benefits (because of **Monero's Ring Signature technology**). 
+However, after "Alice" if the person was to churn their Monero after receiving it from the exchange (CORRECTLY) then there would be no chance in being identified. Additionally, waiting a minimum of **12 hours**, and ideally **one to two days,** before exchanging your Monero adds significant privacy benefits (because of **Monero's Ring Signature technology**). 
 
 ### self-sending:
 
