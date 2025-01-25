@@ -8,13 +8,6 @@ Churning is typically used to increase **transaction obfuscation** by breaking l
 
 We all know XMR churning is very controversial topic, some say churning benefits your privacy and others say it significantly harms your privacy even more. Hence why I wrote `moneroc` tool and this writeup to help explain why XMR churning is beneficial in TODAYS time if done correctly.
 
-### sweep_all:
-To my understanding most people churn via the `sweep_all` method which links outputs (i.e., undermines your privacy). The concern with this method is that if you sweep coins from multiple addresses (often containing unspent outputs), it links all those outputs together into one transaction.
-
-The main issue with `sweep_all` is more about **consolidation**. For example, by consolidating funds from multiple addresses into one, it risks revealing relationships between addresses that were previously independent. 
-
-While it does consolidate the funds, it creates a direct link between multiple addresses, which could make the transaction history easier to trace if someone is able to track the previous addresses. This linking of outputs could potentially reduce privacy, especially if you use the same `sweep_all` methods repeatedly.
-
 # Why is Churning needed?
 
 Monero churning is really only needed especially when your funds originate from an exchange/identifiable source/traceable source that WILL report to **Chainalysis** and/or the **IRS**. So, I agree with people who say normal Monero users should not participate in Monero churning.
@@ -35,13 +28,20 @@ One highly notable example is when **Julius "zeekill" Kivimäki**, who was ident
 
 However, after "Alice" if the person was to churn their Monero after receiving it from the exchange (CORRECTLY) then there would be no chance in being identified. Additionally, waiting a minimum of **12 hours**, and ideally **one to two days,** before exchanging your Monero adds significant privacy benefits (because of **Monero's Ring Signature technology**). 
 
+### sweep_all:
+To my understanding most people churn via the `sweep_all` method which links outputs (i.e., undermines your privacy). The concern with this method is that if you sweep coins from multiple addresses (often containing unspent outputs), it links all those outputs together into one transaction.
+
+The main issue with `sweep_all` is more about **consolidation**. For example, by consolidating funds from multiple addresses into one, it risks revealing relationships between addresses that were previously independent. 
+
+While it does consolidate the funds, it creates a direct link between multiple addresses, which could make the transaction history easier to trace if someone is able to track the previous addresses. This linking of outputs could potentially reduce privacy, especially if you use the same `sweep_all` methods repeatedly.
+
 ### self-sending:
 
 Self-sending is when you send coins back to yourself within the same wallet **account** (e.g., using the same receiving address or generating a new address under the same account).
 
 Although Monero uses **stealth addresses** to ensure that transactions within the same wallet are unlinkable to external observers, this process **doesn't break any inherent link** between the source and destination addresses **for the wallet owner**. This means that while the transaction appears private to anyone looking at the blockchain, **the relationship between the internal address remains intact** for the wallet holder.
 
-If you're sending Monero from **Address A to address B** within the same wallet **account**, this doesn't effectively obfuscate the flow of funds. It simply moves the funds around internally without adding any further privacy protection, as both addresses are **part of the same wallet (account)** and are still traceable in relation to each other. This is especially true if you received the funds from a **known source** (e.g., an exchange).
+For external observers, the transaction appears as private and unlinkable as any other Monero transaction. However, for the wallet owner, the relationship between the source and destination remains fully traceable. Additionally, if the funds originate from a traceable source (e.g., an exchange), a self-send does not disrupt the chain of custody or add meaningful privacy, as the exchange TXID can still be linked to the wallet.
 
 # Introduction to `moneroc`
 
