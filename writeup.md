@@ -33,8 +33,8 @@ There are still a few key things I'd like to mention/explain:
 - The minimum amount of churns recommended is 3
 - Minimum (range) amount of time to wait between each operation is at least 30 minutes. Here's why:
     * **Avoiding Predictability:** Rapid, automated transactions can easily be identified by observers/adversaries/3rd parties, leading to patterns that could compromise/undermine your privacy.
-    * It enhances **Monero's Ring Signature Privacy**, once 1 FULL whole churn loop is done, 8 to 10+ hours have passed, the **ring signature** mechanism in Monero becomes much more effective. Monero uses **ring signatures** to mix your transaction with others, making it difficult to trace the source or destination of funds. When funds are moved across multiple acounts over time, the **number of decoy addresses** in the ring increases, which strethens the privacy of the transaction.
-    * The **ring size**—such as **Ring 16**—means that there are 16 possibile sources for a transaction, including your own address and 15 decoy addresses. As more time passes and more churn occurs, the total number of decoy addresses involved in each transaction increases, making it significantly harder to identify the real sender or receiver.
+    * It enhances **Monero's Ring Signature Privacy**, once 1 FULL whole churn loop is done, 8 to 10+ hours have passed, the **ring signature** mechanism in Monero becomes much more effective. Monero uses **ring signatures** to mix your transaction with others, making it difficult to trace the source or destination of funds. When funds are moved across multiple acounts over time, the **number of decoy addresses** in the ring increases, which strengthens the privacy of the transaction.
+    * The **ring size**—such as **Ring 16**—means that there are 16 possible sources for a transaction, including your own address and 15 decoy addresses. As more time passes and more churn occurs, the total number of decoy addresses involved in each transaction increases, making it significantly harder to identify the real sender or receiver.
 - It is HIGHLY recommended that you run your OWN monero node and on TOR (read below on why this is needed)
     * running monerod with tor:
         ```
@@ -49,4 +49,4 @@ Chainalysis, in a presentation to the IRS a few months ago (August-September 202
 
 The concern is that if all of your churn transactions come from a single IP address, it could look like they are coming from an exchange or centralized platform. This could be an indicator that you're churning XMR with non-private intentions.
 
-However, not all nodes are CA so it wouldn't be every single TX (churn). Each chunk gets churned a random number of times and then each output split in size so there's a lot of oppurtunities for `moneroc` to have connected to CA node(s) and non CA node(s).
+However, not all nodes are CA so it wouldn't be every single TX (churn). Each chunk gets churned a random number of times and then each output split in size so there's a lot of opportunities for `moneroc` to have connected to CA node(s) and non CA node(s).
