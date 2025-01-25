@@ -21,7 +21,7 @@ Self-sending is when you send coins back to yourself within the same wallet **ac
 
 Although Monero uses **stealth addresses** to ensure that transactions within the same wallet are unlinkable to external observers, this process **doesn't break any inherent link** between the source and destination addresses **for the wallet owner**. This means that while the transaction appears private to anyone looking at the blockchain, **the relationship between the internal address remains intact** for the wallet holder.
 
-If you're sending Monero from **Address A to address B** within the same wallet **account**, this doesn't effectively obfuscate the flow of funds. It simply moves the funds around internally without adding any further privacy protection, as both addresses are **part of the same wallet account** and are still traceable in relation to each other. This is especially true if you received the funds from a **known source** (e.g., an exchange).
+If you're sending Monero from **Address A to address B** within the same wallet **account**, this doesn't effectively obfuscate the flow of funds. It simply moves the funds around internally without adding any further privacy protection, as both addresses are **part of the same wallet (account)** and are still traceable in relation to each other. This is especially true if you received the funds from a **known source** (e.g., an exchange).
 
 # Introduction to `moneroc`
 
