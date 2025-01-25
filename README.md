@@ -14,6 +14,8 @@
 * **Obfuscating the source of funds** by introducing multiple decoy addresses that get mixed into future transactions, utilizing **ring signatures** to obscure transaction origins.
 * **Simulating real-world transaction patterns** by adding unpredictable delays and repeating churn operations over several hours, preventing any identifying patterns in fund transfers.
 
+**NOTE: `moneroc` is not offering or guaranting full complete untraceability of your Monero, simply put it is just a tool designed to help Monero users who participate in churning [to do it properly](https://github.com/antichainalysis/xmr-churner/blob/main/writeup.md) (read up carefully before you use). There is no silver bullet for privacy, people can slip up and make mistakes—just be smart, cautious, and aware/vigilant.**
+
 # Features
 * **Dynamic Range Calculation**: `moneroc` automatically calculates the range of atomic units (AMU) to distribute based on the total balance of the account (main account 0).
 * **Account Creation & Transfer**: `moneroc` automatically creates new monero accounts and distributes a random amount of XMR within a specific range between them.
