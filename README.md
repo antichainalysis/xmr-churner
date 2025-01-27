@@ -54,7 +54,7 @@ Example:
 bun run main.ts --rpc-url http://127.0.0.1:18082/json_rpc --churnRange 3,7
 ```
 
-# How It Works
+# [How It Works](https://github.com/antichainalysis/xmr-churner/blob/main/xmr_churner.png)
 
 Read [this](https://github.com/antichainalysis/xmr-churner/blob/main/example_flow_of_funds_process.md) for a tldr/faster, better, simpler, and clearer understanding of `moneroc`.
 
