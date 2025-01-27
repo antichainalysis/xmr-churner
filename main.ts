@@ -44,7 +44,7 @@ async function main() {
     (value) => value * 1e12,
   );
 
-  console.log('Calculated atomic units range:', [minRange / 1e12, maxRange / 1e12]);
+  console.log('Calculated range:', [minRange / 1e12, maxRange / 1e12]);
 
   while (true) {
     const { balance, unlockedBalance } = await getBalance(rpcUrl);
