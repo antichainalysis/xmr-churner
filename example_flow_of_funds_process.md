@@ -245,4 +245,9 @@ classDiagram
     Churning8 --> Account18 : transfers to
     Churning9 --> Account19 : transfers to
     Churning 10 --> Account20 : transfers to
-``` 
+```
+
+# Reality
+### When you run moneroc:
+![XMR Churner](https://github.com/antichainalysis/xmr-churner/blob/main/xmr_churner.png?raw=true)
+
