@@ -38,13 +38,13 @@ const delayRange: [number, number] = [30 * 60 * 1000, 60 * 60 * 1000];
 async function main() {
   const { balance: totalBalance } = await getBalance(rpcUrl, 0);
 
-  console.log('Total balance in account 0:', totalBalance);
+  console.log('Total balance in account 0:', totalBalance / 1e12);
 
-  const [minRange, maxRange] = calculateAmuRange(totalBalance).map(
+  const [minRange, maxRange] = calculateAmuRange(totalBalance / 1e12).map(
     (value) => value * 1e12,
   );
 
-  console.log('Calculated atomic units range:', [minRange, maxRange]);
+  console.log('Calculated atomic units range:', [minRange / 1e12, maxRange / 1e12]);
 
   while (true) {
     const { balance, unlockedBalance } = await getBalance(rpcUrl);
