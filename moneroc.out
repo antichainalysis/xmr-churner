@@ -1,0 +1,216 @@
+root@debian:~/xmr-churner# bun run main.ts --rpc-url http://127.0.0.1:18083/json_rpc --churnRange 3,5                                                                                
+Total balance in account 0: 596.0580623298                                                     
+Calculated atomic units range: [ 34, 102 ]                                                     
+Balance: 596.0580623298                                                                        
+Unlocked: 596.0580623298                                                                       
+Created new account with address: 88tdp...JgM6
+Sending 90.510942478119 XMR to 88tdp...JgM6   
+Transaction sent to RPC                                                                                                                                                                       
+Balance: 505.547075331681                                                                      
+Unlocked: 0                                                                                    
+Waiting for funds to unlock...                                                                 
+Funds unlocked                                                                                 
+Created new account with address: 85wk...omWrf
+Sending 57.604040346455 XMR to 85wk...omWrf
+Transaction sent to RPC                        
+Balance: 447.943004365226                      
+Unlocked: 0                                    
+Waiting for funds to unlock...                                                                 
+Funds unlocked                                 
+Created new account with address: 8A4N...ZhTW
+Sending 87.148194397831 XMR to 8A4N...ZhTW
+Transaction sent to RPC                        
+Balance: 360.794779267395                      
+Unlocked: 0                                    
+Waiting for funds to unlock...                                                                 
+Funds unlocked                                 
+Created new account with address: 87x3...DZu2
+Sending 40.588276871156 XMR to 87x3...DZu2
+Transaction sent to RPC                        
+Balance: 320.206471656239                      
+Unlocked: 0                                    
+Waiting for funds to unlock...                                                                 
+Funds unlocked                                 
+Created new account with address: 8A7E...VADy
+Sending 92.699746340546 XMR to 8A7E...VADy
+Transaction sent to RPC                        
+Balance: 227.506694635693                                                                                                                                                            
+Unlocked: 0                                    
+Waiting for funds to unlock...                                                                 
+Funds unlocked                                 
+Created new account with address: 85Rr...fiPu
+Sending 37.928563212171 XMR to 85Rr...fiPu
+Transaction sent to RPC                        
+Balance: 189.578100723522                      
+Unlocked: 0                                    
+Waiting for funds to unlock...                                                                 
+Funds unlocked                                 
+Created new account with address: 82rD...xUtp
+Sending 80.702962105713 XMR to 82rD...xUtp
+Transaction sent to RPC                        
+Balance: 108.875016297809                      
+Unlocked: 0                                    
+Waiting for funds to unlock...                                                                 
+Funds unlocked                                 
+Created new account with address: 8BEM...WR7v
+Sending 92.866165910428 XMR to 8BEM...WR7v
+Transaction sent to RPC                        
+Balance: 16.008819587381                       
+Unlocked: 0                                    
+Finished distributing (out of funds)                                                           
+waiting 40 minutes                             
+Starting churn                                 
+Doing churn 1/6 for account index 0                                                            
+Swept 0 -> 11                                  
+waiting 48 minutes                             
+Doing churn 1/4 for account index 1                                                            
+Swept 1 -> 12                                  
+waiting 58 minutes                             
+Doing churn 1/4 for account index 3                                                            
+Swept 3 -> 13                                  
+waiting 47 minutes                             
+Doing churn 1/4 for account index 4                                                            
+Swept 4 -> 14                                                                                                                                                                        
+waiting 31 minutes                             
+Doing churn 1/6 for account index 5                                                            
+Swept 5 -> 15                                  
+waiting 34 minutes                             
+Doing churn 1/6 for account index 6                                                            
+Swept 6 -> 16                                  
+waiting 43 minutes                             
+Doing churn 1/6 for account index 7                                                            
+Swept 7 -> 17                                  
+waiting 53 minutes                             
+Doing churn 1/6 for account index 8                                                            
+Swept 8 -> 18                                  
+waiting 52 minutes                             
+Doing churn 1/6 for account index 9                                                            
+Swept 9 -> 19                                  
+waiting 42 minutes                             
+Doing churn 1/3 for account index 10                                                           
+Swept 10 -> 20                                 
+waiting 33 minutes                             
+Doing churn 2/6 for account index 11                                                           
+Swept 11 -> 21                                 
+waiting 44 minutes                             
+Doing churn 2/4 for account index 12                                                           
+Swept 12 -> 22                                 
+waiting 48 minutes                             
+Doing churn 2/4 for account index 13                                                           
+Swept 13 -> 23                                 
+waiting 36 minutes                             
+Doing churn 2/4 for account index 14                                                           
+Swept 14 -> 24                                 
+waiting 38 minutes                             
+Doing churn 2/6 for account index 15                                                           
+Swept 15 -> 25                                 
+waiting 42 minutes                             
+Doing churn 2/6 for account index 16                                
+Swept 16 -> 26                                                                                                                                                                       
+waiting 59 minutes                             
+Doing churn 2/6 for account index 17                                                           
+Swept 17 -> 27                                 
+waiting 50 minutes                             
+Doing churn 2/6 for account index 18                                                           
+Swept 18 -> 28                                 
+waiting 37 minutes                             
+Doing churn 2/6 for account index 19                                                           
+Swept 19 -> 29                                 
+waiting 40 minutes                             
+Doing churn 2/3 for account index 20                                                           
+Swept 20 -> 30                                 
+waiting 37 minutes                             
+Doing churn 3/6 for account index 21                                                           
+Swept 21 -> 31                                 
+waiting 53 minutes                             
+Doing churn 3/4 for account index 22                                                           
+Swept 22 -> 32                                 
+waiting 52 minutes                             
+Doing churn 3/4 for account index 23                                                           
+Swept 23 -> 33                                 
+waiting 55 minutes                             
+Doing churn 3/4 for account index 24                                                           
+Swept 24 -> 34                                 
+waiting 44 minutes                             
+Doing churn 3/6 for account index 25                                                           
+Swept 25 -> 35                                 
+waiting 42 minutes                             
+Doing churn 3/6 for account index 26                                                           
+Swept 26 -> 36                                 
+waiting 58 minutes                             
+Doing churn 3/6 for account index 27                                                           
+Swept 27 -> 37                                 
+waiting 59 minutes                             
+Doing churn 3/6 for account index 28                                                           
+Swept 28 -> 38                                                                                                                                                            
+waiting 32 minutes                             
+Doing churn 3/6 for account index 29                                                           
+Swept 29 -> 39                                 
+waiting 53 minutes                             
+Doing churn 3/3 for account index 30                                                           
+Swept 30 -> 40                                 
+waiting 39 minutes                             
+Doing churn 4/6 for account index 31                                                           
+Swept 31 -> 41                                 
+waiting 51 minutes                             
+Doing churn 4/4 for account index 32                                                           
+Swept 32 -> 42                                 
+waiting 58 minutes                             
+Doing churn 4/4 for account index 33                                                           
+Swept 33 -> 43                                 
+waiting 44 minutes                             
+Doing churn 4/4 for account index 34                                                           
+Swept 34 -> 44                                 
+waiting 32 minutes                             
+Doing churn 4/6 for account index 35                                                           
+Swept 35 -> 45                                 
+waiting 54 minutes                             
+Doing churn 4/6 for account index 36                                                           
+Swept 36 -> 46                                 
+waiting 58 minutes                             
+Doing churn 4/6 for account index 37                                                           
+Swept 37 -> 47                                 
+waiting 32 minutes                             
+Doing churn 4/6 for account index 38                                                           
+Swept 38 -> 48                                 
+waiting 51 minutes                             
+Doing churn 4/6 for account index 39                                                           
+Swept 39 -> 49                                 
+waiting 39 minutes                             
+Doing churn 5/6 for account index 41                                     
+Swept 41 -> 50                                                                                                                                                      
+waiting 41 minutes                             
+Doing churn 5/6 for account index 45                                                           
+Swept 45 -> 51                                 
+waiting 49 minutes                             
+Doing churn 5/6 for account index 46                                                           
+Swept 46 -> 52                                 
+waiting 31 minutes                             
+Doing churn 5/6 for account index 47                                                           
+Swept 47 -> 53                                 
+waiting 45 minutes                             
+Doing churn 5/6 for account index 48                                                           
+Swept 48 -> 54                                 
+waiting 35 minutes                             
+Doing churn 5/6 for account index 49                                                           
+Swept 49 -> 55                                 
+waiting 43 minutes                             
+Doing churn 6/6 for account index 50                                                           
+Swept 50 -> 56                                 
+waiting 38 minutes                             
+Doing churn 6/6 for account index 51                                                           
+Swept 51 -> 57                                 
+waiting 32 minutes                             
+Doing churn 6/6 for account index 52                                                           
+Swept 52 -> 58                                 
+waiting 38 minutes                             
+Doing churn 6/6 for account index 53                                                           
+Swept 53 -> 59                                 
+waiting 59 minutes                             
+Doing churn 6/6 for account index 54                                                           
+Swept 54 -> 60                                 
+waiting 42 minutes                             
+Doing churn 6/6 for account index 55                                                           
+Swept 55 -> 61                                 
+waiting 55 minutes                             
+Finished all churns                            
