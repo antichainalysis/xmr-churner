@@ -35,7 +35,7 @@ export async function churn(
       method: 'sweep_all',
       params: {
         address,
-        accountIndex: accountIndex,
+        account_index: accountIndex,
       },
     }),
   });
